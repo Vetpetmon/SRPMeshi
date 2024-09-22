@@ -1,0 +1,6 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["#A"],
+  "key": {
+    "#": {"item": "srpmeshi:membread", "data": 0},
+    "A": {"item": "srpmeshi:cooked_ground_tendons", "data": 0}
+  }, "result": {"item": "srpmeshi:tendon_sandwich_b", "count": 1}}

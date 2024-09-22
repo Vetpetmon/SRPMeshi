@@ -1,0 +1,6 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["#","A","A"],
+  "key": {
+    "#": {"item": "srparasites:parasitebush", "data": 3},
+    "A": {"item": "minecraft:stick", "data": 0}
+  }, "result": {"item": "srpmeshi:eyebush_stick", "count": 1}}

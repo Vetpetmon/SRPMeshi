@@ -1,0 +1,6 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["#","A"],
+  "key": {
+    "#": {"item": "srpmeshi:summoner_jelly", "data": 0},
+    "A": {"item": "srpmeshi:roasted_fangs", "data": 0}
+  }, "result": {"item": "srpmeshi:glazed_fangs", "count": 1}}

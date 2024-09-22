@@ -1,0 +1,6 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["##","A#"],
+  "key": {
+    "#": {"item": "srparasites:assimilated_flesh", "data": 0},
+    "A": {"item": "srparasites:ada_reeker_drop", "data": 0}
+  }, "result": {"item": "srpmeshi:raw_fangs", "count": 1}}

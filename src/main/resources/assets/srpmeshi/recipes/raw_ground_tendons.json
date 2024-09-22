@@ -1,0 +1,6 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["# ","A#"],
+  "key": {
+    "#": {"item": "srparasites:assimilated_flesh", "data": 0},
+    "A": {"item": "srparasites:lurecomponent3", "data": 0}
+  }, "result": {"item": "srpmeshi:raw_ground_tendons", "count": 1}}

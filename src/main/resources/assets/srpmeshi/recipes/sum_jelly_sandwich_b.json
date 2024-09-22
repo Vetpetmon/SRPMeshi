@@ -1,0 +1,6 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["#A"],
+  "key": {
+    "#": {"item": "srpmeshi:membread", "data": 0},
+    "A": {"item": "srpmeshi:summoner_jelly", "data": 0}
+  }, "result": {"item": "srpmeshi:sum_jelly_sandwich_b", "count": 1}}

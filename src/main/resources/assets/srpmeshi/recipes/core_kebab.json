@@ -1,0 +1,7 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["  B"," A ","C  "],
+  "key": {
+    "A": {"item": "srparasites:ada_manducater_drop", "data": 0},
+    "B": {"item": "srparasites:ada_summoner_drop", "data": 0},
+    "C": {"item": "minecraft:stick", "data": 0}
+  }, "result": {"item": "srpmeshi:core_kebab", "count": 1}}

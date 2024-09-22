@@ -1,0 +1,7 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["#B","AB"],
+  "key": {
+    "#": {"item": "srparasites:lurecomponent1", "data": 0},
+    "A": {"item": "minecraft:bowl", "data": 0},
+    "B": {"item": "minecraft:stick", "data": 0}
+  }, "result": {"item": "srpmeshi:rupter_ramen", "count": 1}}

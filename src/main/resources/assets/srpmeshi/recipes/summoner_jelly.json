@@ -1,0 +1,6 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": [" A ","A#A"," A "],
+  "key": {
+    "#": {"item": "srparasites:ada_summoner_drop", "data": 0},
+    "A": {"item": "minecraft:slime_ball", "data": 0}
+  }, "result": {"item": "srpmeshi:summoner_jelly", "count": 3}}
