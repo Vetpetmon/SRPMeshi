@@ -2,7 +2,7 @@
 Dungeon Meshi but for SRP
 
 # Changelog:
-# 1.2
+## 1.2
 - Made cooked & raw ground tendons wolf food
 - Added membrane bread
 - Added tendon sandwich & membrane bread alt
