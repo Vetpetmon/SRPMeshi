@@ -5,6 +5,7 @@ Dungeon Meshi but for SRP
 
 ## 1.3
 - Fixed recipe for the Core Kebab
+- Added zh_cn.lang (PLuMa nocTis)
 
 ## 1.2
 - Made cooked & raw ground tendons wolf food
