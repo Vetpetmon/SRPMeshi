@@ -16,5 +16,6 @@ public class FurnaceRecipes {
         GameRegistry.addSmelting(SRPMItems.raw_scallops, new ItemStack(SRPMItems.cooked_scallops), 3.0f);
         GameRegistry.addSmelting(SRPMItems.raw_ground_tendons, new ItemStack(SRPMItems.cooked_ground_tendons), 1.0f);
         GameRegistry.addSmelting(SRPItems.venkrol_drop, new ItemStack(SRPMItems.membread), 1.0f);
+        GameRegistry.addSmelting(SRPMItems.membread, new ItemStack(SRPMItems.friedbeckonskins,2), 1.0f);
     }
 }

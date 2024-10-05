@@ -5,6 +5,7 @@ Dungeon Meshi but for SRP
 
 ## 1.3
 - Fixed recipe for the Core Kebab
+- Added Beckon Chicharrón
 - Added zh_cn.lang (PLuMa nocTis)
 
 ## 1.2
