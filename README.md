@@ -5,6 +5,8 @@ Dungeon Meshi but for SRP
 
 ## 1.4
 - Added Rotdog
+- Added Vilebeef
+- Added Vilesteak
 
 
 ## 1.3
