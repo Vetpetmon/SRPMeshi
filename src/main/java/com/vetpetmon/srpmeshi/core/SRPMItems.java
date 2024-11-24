@@ -32,7 +32,8 @@ public class SRPMItems {
         sum_jelly_sandwich = new ItemSRPFood("sum_jelly_sandwich",5,0.25f,false).setPotionEffect(new PotionEffect(MobEffects.STRENGTH, 900, 1), 1.0F),
         sum_jelly_sandwich_b = new ItemSRPFood("sum_jelly_sandwich_b",6,0.3f,false).setPotionEffect(new PotionEffect(MobEffects.STRENGTH, 900, 2), 1.0F),
         core_kebab = new ItemSRPFood("core_kebab",8,0.4f,false).setPotionEffect(new PotionEffect(MobEffects.INVISIBILITY, 1200, 0), 1.0F),
-        friedbeckonskins = new ItemSRPFood("friedbeckonskins",2,0.25f,false).setPotionEffect(new PotionEffect(MobEffects.HASTE, 300, 0), 1.0F)
+        friedbeckonskins = new ItemSRPFood("friedbeckonskins",2,0.25f,false).setPotionEffect(new PotionEffect(MobEffects.HASTE, 300, 0), 1.0F),
+        rotdog = new ItemSRPFood("rotdog",6,0.3f,false).setPotionEffect(new PotionEffect(MobEffects.STRENGTH, 200, 3), 1.0F)
 
         ;
 }
