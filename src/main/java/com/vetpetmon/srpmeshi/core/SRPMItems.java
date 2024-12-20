@@ -38,8 +38,9 @@ public class SRPMItems {
         vilebeefu = new ItemSRPFood("vilebeefu",4,0.15f,false).setPotionEffect(new PotionEffect(SRPPotions.COTH_E, 200, 0), 1.0F),
         vilebeefc = new ItemSRPFood("vilebeefc",6,0.25f,false).setPotionEffect(new PotionEffect(MobEffects.STRENGTH, 400, 2), 1.0F),
     
-        devourercala = new ItemSRPFood("devourercala",1,0.0f,false).setPotionEffect(new PotionEffect(MobEffects.POISON, 200, 2), 1.0F),
-        devourercalacooked = new ItemSRPFood("devourercala_cooked",2,0.1f,false).setPotionEffect(new PotionEffect(SRPPotions.COTH_E, 200, 0), 1.0F)
+        devourercala = new ItemSRPFood("devourercala",1,0.0f,false).setPotionEffect(new PotionEffect(MobEffects.POISON, 100, 3), 1.0F),
+        devourercalacooked = new ItemSRPFood("devourercala_cooked",2,0.1f,false).setPotionEffect(new PotionEffect(SRPPotions.COTH_E, 400, 0), 1.0F),
+        devourersushi = new ItemSRPFood("devourersushi",4,0.2f,false).setPotionEffect(new PotionEffect(SRPPotions.COTH_E, 200, 0), 1.0F)
 
         ;
 }
