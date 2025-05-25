@@ -3,11 +3,16 @@ Dungeon Meshi but for SRP
 
 # Changelog:
 
+
 ## 1.4
 - Added Rotdog
-- Added Vilebeef
-- Added Vilesteak
+- Added Vilebeef (ID: vilebeefr)
+- Added Vilesteak 
+- Added Devourer Calamari (ID: srpmeshi:devourercala)
+- Added Devourer Sushi
 
+Don't worry if the new food items are currently unobtainable, official integration is on the way.
+For pack makers, you can add Raw Vilebeef and Devourer Calamari to the loot tables.
 
 ## 1.3
 - Fixed recipe for the Core Kebab

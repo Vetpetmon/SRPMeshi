@@ -19,5 +19,6 @@ public class FurnaceRecipes {
         GameRegistry.addSmelting(SRPMItems.membread, new ItemStack(SRPMItems.friedbeckonskins,2), 1.0f);
         GameRegistry.addSmelting(SRPMItems.vilebeefr, new ItemStack(SRPMItems.vilebeefu), 1.0f);
         GameRegistry.addSmelting(SRPMItems.vilebeefu, new ItemStack(SRPMItems.vilebeefc), 1.5f);
+        GameRegistry.addSmelting(SRPMItems.devourercala, new ItemStack(SRPMItems.devourercalacooked), 1.5f);
     }
 }
