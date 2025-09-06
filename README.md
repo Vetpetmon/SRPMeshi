@@ -1,7 +1,13 @@
 # Scape and Meshi
-Dungeon Meshi but for SRP
+Dungeon Meshi, but for SRP
 
 # Changelog:
+
+## 1.6
+- Added configs
+- Effects can now be toggled, see independent toggles below
+- Positive effects can be toggled
+- Negative effects can be toggled
 
 ## 1.5
 - Added Devourer Calamari (ID: srpmeshi:devourercala)

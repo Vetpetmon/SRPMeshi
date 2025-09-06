@@ -7,7 +7,10 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Config;
+import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -57,6 +60,16 @@ public class Core {
     public static ResourceLocation getResource(final String name)
     {
         return new ResourceLocation(Core.MOD_ID, name);
+    }
+
+    @SubscribeEvent
+    public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)
+    {
+        if (event.getModID().equals(Core.MOD_ID))
+        {
+            ConfigManager.sync(Core.MOD_ID, Config.Type.INSTANCE);
+            logger.info("Configuration loaded or changed.");
+        }
     }
 
     @SideOnly(Side.CLIENT)
