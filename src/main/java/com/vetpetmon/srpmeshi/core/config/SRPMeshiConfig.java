@@ -22,5 +22,10 @@ public class SRPMeshiConfig {
     @Config.Comment({"Allows food items to be eaten at any time."})
     public static boolean alwaysEdible = false;
 
+    @Config.Name("Terrafirmacraft Module")
+    @Config.Comment({"Attaches Food Data to items.","If you are playing with Terrafirmagreg, this should be disabled in favor of using Crafttweaker."})
+    @Config.RequiresMcRestart
+    public static boolean tfcModule = true;
+
 
 }

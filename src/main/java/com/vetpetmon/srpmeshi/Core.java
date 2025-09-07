@@ -3,14 +3,23 @@ package com.vetpetmon.srpmeshi;
 
 import com.vetpetmon.srpmeshi.client.IHasModel;
 import com.vetpetmon.srpmeshi.core.SRPMItems;
+import com.vetpetmon.srpmeshi.core.config.SRPMeshiConfig;
+import com.vetpetmon.srpmeshi.core.tfc.MeshiFoodData;
+import net.dries007.tfc.api.capability.food.CapabilityFood;
+import net.dries007.tfc.api.capability.food.FoodData;
+import net.dries007.tfc.api.capability.food.FoodHandler;
+import net.dries007.tfc.objects.inventory.ingredient.IIngredient;
 import net.minecraft.item.Item;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -21,6 +30,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.function.Supplier;
 
 @Mod(modid = Core.MOD_ID, name = Core.MOD_NAME, version = Core.VERSION, dependencies = Core.DEPENDENCIES)
 public class Core {
@@ -42,11 +53,16 @@ public class Core {
         logger = event.getModLog();
         proxy.preInit(event);
 
+        if (Loader.isModLoaded("tfc")) {
+            logger.info("Hello, Terrafirmacraft!");
+        }
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event) {
+
         proxy.init(event);
     }
 
@@ -76,6 +92,22 @@ public class Core {
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(SRPMItems.ALL_ITEMS.toArray(new Item[0]));
+
+        if (Loader.isModLoaded("tfc") && SRPMeshiConfig.tfcModule) {
+            logger.info("We will now attempt to natively support TFC's food system.");
+
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercala),         () -> new FoodHandler(null, MeshiFoodData.DEVOURER_CALAMARI));
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercalacooked),   () -> new FoodHandler(null, MeshiFoodData.COOKED_DEVOURER_CALAMARI));
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourersushi),        () -> new FoodHandler(null, MeshiFoodData.DEVOURER_SUSHI));
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefr),            () -> new FoodHandler(null, MeshiFoodData.RAW_VILEBEEF));
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefu),            () -> new FoodHandler(null, MeshiFoodData.UNDERCOOKED_VILEBEEF));
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefc),            () -> new FoodHandler(null, MeshiFoodData.COOKED_VILEBEEF));
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.rupter_ramen),         () -> new FoodHandler(null, MeshiFoodData.RUPTER_RAMEN));
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_buglin),       () -> new FoodHandler(null, MeshiFoodData.ROASTED_BUGLIN));
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_fangs),            () -> new FoodHandler(null, MeshiFoodData.RAW_FANGS));
+            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_fangs),        () -> new FoodHandler(null, MeshiFoodData.COOKED_FANGS));
+
+        }
     }
 
     @Mod.Instance(MOD_ID)

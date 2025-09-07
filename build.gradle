@@ -119,6 +119,7 @@ dependencies {
 
 
     implementation files('lib/SRParasites-1.12.2v1.9.21.jar')
+    compileOnly("curse.maven:terrafirmacraft-302973:3645502")
 
 }
 
