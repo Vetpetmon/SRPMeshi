@@ -5,6 +5,7 @@ Dungeon Meshi, but for SRP
 
 ## 1.6
 - Added configs
+- Configs are accessible in-game
 - Effects can now be toggled, see independent toggles below
 - Positive effects can be toggled
 - Negative effects can be toggled
