@@ -4,6 +4,8 @@ Dungeon Meshi, but for SRP
 # Changelog:
 
 ## 1.6
+I regret to inform you that beckons are vegetarian-friendly.
+
 - Added configs
 - Configs are accessible in-game
 - Effects can now be toggled, see independent toggles below

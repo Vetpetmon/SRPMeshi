@@ -102,16 +102,30 @@ public class Core {
 
     public void attachFoodData(){
 
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercala),         () -> new FoodHandler(null, MeshiFoodData.DEVOURER_CALAMARI));
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercalacooked),   () -> new FoodHandler(null, MeshiFoodData.COOKED_DEVOURER_CALAMARI));
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourersushi),        () -> new FoodHandler(null, MeshiFoodData.DEVOURER_SUSHI));
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefr),            () -> new FoodHandler(null, MeshiFoodData.RAW_VILEBEEF));
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefu),            () -> new FoodHandler(null, MeshiFoodData.UNDERCOOKED_VILEBEEF));
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefc),            () -> new FoodHandler(null, MeshiFoodData.COOKED_VILEBEEF));
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.rupter_ramen),         () -> new FoodHandler(null, MeshiFoodData.RUPTER_RAMEN));
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_buglin),       () -> new FoodHandler(null, MeshiFoodData.ROASTED_BUGLIN));
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_fangs),            () -> new FoodHandler(null, MeshiFoodData.RAW_FANGS));
-        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_fangs),        () -> new FoodHandler(null, MeshiFoodData.COOKED_FANGS));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercala),             () -> new FoodHandler(null, MeshiFoodData.DEVOURER_CALAMARI));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercalacooked),       () -> new FoodHandler(null, MeshiFoodData.COOKED_DEVOURER_CALAMARI));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourersushi),            () -> new FoodHandler(null, MeshiFoodData.DEVOURER_SUSHI));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefr),                () -> new FoodHandler(null, MeshiFoodData.RAW_VILEBEEF));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefu),                () -> new FoodHandler(null, MeshiFoodData.UNDERCOOKED_VILEBEEF));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefc),                () -> new FoodHandler(null, MeshiFoodData.COOKED_VILEBEEF));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.rupter_ramen),             () -> new FoodHandler(null, MeshiFoodData.RUPTER_RAMEN));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_buglin),           () -> new FoodHandler(null, MeshiFoodData.ROASTED_BUGLIN));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_fangs),                () -> new FoodHandler(null, MeshiFoodData.RAW_FANGS));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_fangs),            () -> new FoodHandler(null, MeshiFoodData.COOKED_FANGS));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.glazed_fangs),             () -> new FoodHandler(null, MeshiFoodData.GLAZED_FANGS));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_scallops),             () -> new FoodHandler(null, MeshiFoodData.RAW_SCALLOPS));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.cooked_scallops),          () -> new FoodHandler(null, MeshiFoodData.COOKED_SCALLOPS));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.sum_jelly_sandwich_b),     () -> new FoodHandler(null, MeshiFoodData.SUMMONER_JELLY_SANDWICH_B));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.sum_jelly_sandwich),       () -> new FoodHandler(null, MeshiFoodData.SUMMONER_JELLY_SANDWICH));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.tendon_sandwich_b),        () -> new FoodHandler(null, MeshiFoodData.TENDON_SANDWICH_B));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.tendon_sandwich),          () -> new FoodHandler(null, MeshiFoodData.TENDON_SANDWICH));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.summoner_jelly),           () -> new FoodHandler(null, MeshiFoodData.SUMMONER_JELLY));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.beckon_stick),             () -> new FoodHandler(null, MeshiFoodData.BECKON_STICK));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.eyebush_stick),            () -> new FoodHandler(null, MeshiFoodData.EYEBUSH_STICK));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.friedbeckonskins),         () -> new FoodHandler(null, MeshiFoodData.FRIED_BECKON_MEMBRANE));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.core_kebab),               () -> new FoodHandler(null, MeshiFoodData.CORE_KEBAB));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.membread),                 () -> new FoodHandler(null, MeshiFoodData.MEMBRANE_BREAD));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.rotdog),                   () -> new FoodHandler(null, MeshiFoodData.ROTDOG));
 
     }
 
