@@ -3,7 +3,7 @@ package com.vetpetmon.srpmeshi.core.config;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.Configuration;
 
-@Config(modid = "wyrmsofnyrus", name = "Wyrms of Nyrus Client")
+@Config(modid = "srpmeshi", name = "SRP Meshi Config")
 public class SRPMeshiConfig {
 
     @Config.Name("Item Effects")
