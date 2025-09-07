@@ -23,7 +23,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = Core.MOD_ID, name = Core.MOD_NAME, version = Core.VERSION, dependencies = Core.DEPENDENCIES)
-
 public class Core {
     public static final String
             MOD_ID = "srpmeshi",
@@ -62,15 +61,6 @@ public class Core {
         return new ResourceLocation(Core.MOD_ID, name);
     }
 
-    @SubscribeEvent
-    public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)
-    {
-        if (event.getModID().equals(Core.MOD_ID))
-        {
-            ConfigManager.sync(Core.MOD_ID, Config.Type.INSTANCE);
-            logger.info("Configuration loaded or changed.");
-        }
-    }
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
