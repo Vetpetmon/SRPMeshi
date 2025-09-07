@@ -53,11 +53,8 @@ public class Core {
         logger = event.getModLog();
         proxy.preInit(event);
 
-        if (Loader.isModLoaded("tfc")) {
-            if (SRPMeshiConfig.tfcModule)
-                logger.info("Hello, Terrafirmacraft!");
-            else
-                logger.error("Terrafirmacraft was detected, but the Terrafirmacraft module is disabled. If you do not intend on using Crafttweaker to add food values yourself, go into mod settings or configs and activate it.");
+        if (Loader.isModLoaded("tfc") && SRPMeshiConfig.tfcModule) {
+            logger.info("Hello, Terrafirmacraft!");
         }
 
         MinecraftForge.EVENT_BUS.register(this);

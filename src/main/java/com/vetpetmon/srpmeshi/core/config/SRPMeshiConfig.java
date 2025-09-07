@@ -27,9 +27,9 @@ public class SRPMeshiConfig {
     public static boolean alwaysEdible = false;
 
     @Config.Name("Terrafirmacraft Module")
-    @Config.Comment({"Attaches Food Data to items.","If you are playing with Terrafirmagreg, this should be disabled in favor of using Crafttweaker.","Disabled by default. Requires a full game reboot to apply."})
+    @Config.Comment({"Attaches Food Data to items.","If you are playing with Terrafirmagreg, this should be disabled in favor of using Crafttweaker."})
     @Config.RequiresMcRestart
-    public static boolean tfcModule = false;
+    public static boolean tfcModule = true;
 
 
 }
