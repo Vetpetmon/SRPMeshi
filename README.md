@@ -10,7 +10,7 @@ Dungeon Meshi, but for SRP
 - Positive effects can be toggled
 - Negative effects can be toggled
 - AlwaysEdible can be toggled
-- AlwaysEdible toggle will work when configs are changed live
+- Terrafirmacraft integration (Needs manual toggle)
 
 ## 1.5
 - Added Devourer Calamari (ID: srpmeshi:devourercala)

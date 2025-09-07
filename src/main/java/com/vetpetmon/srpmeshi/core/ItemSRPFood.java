@@ -20,40 +20,17 @@ public class ItemSRPFood extends ItemFood implements IHasModel {
         super(amount, saturation, isWolfFood);
         setUnlocalizedName(name);
         setRegistryName(name);
+        this.alwaysEdibleToggle(SRPMeshiConfig.alwaysEdible);
         setCreativeTab(SRPMain.SRP_CREATIVETAB);
         SRPMItems.ALL_ITEMS.add(this);
     }
 
-    // I cannot be bothered to deal with access transformers. Therefore, we will rewrite this entirely
-    /** Represents the potion effect that will occur upon eating this food. Set by setPotionEffect */
-    protected PotionEffect potionType;
-    /** Probably of the set potion effect occurring */
-    protected float potionEffectChance;
-    /** If this item gives beneficial effects */
-    protected boolean beneficialEffects;
-
-    @Override
-    protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
-    {
-        if (SRPMeshiConfig.itemEffects) {
-            if (!worldIn.isRemote && this.potionType != null && worldIn.rand.nextFloat() < this.potionEffectChance)
-            {
-                if (
-                        (this.beneficialEffects && SRPMeshiConfig.itemPosEffects)
-                        || (!this.beneficialEffects && SRPMeshiConfig.itemNegEffects)
-                )
-                    player.addPotionEffect(new PotionEffect(this.potionType));
-            }
-        }
-    }
-
-
     public ItemFood setPotionEffectSpecial(PotionEffect effect, float probability, boolean beneficialEffects)
     {
-        this.potionType = effect;
-        this.potionEffectChance = probability;
-        this.beneficialEffects = beneficialEffects;
-        return this;
+        return  (SRPMeshiConfig.itemEffects &&
+                    ((beneficialEffects && SRPMeshiConfig.itemPosEffects)
+                    || (!beneficialEffects && SRPMeshiConfig.itemNegEffects))
+                )?this.setPotionEffect(effect,probability):this;
     }
 
     @Override
@@ -61,17 +38,8 @@ public class ItemSRPFood extends ItemFood implements IHasModel {
         Core.proxy.modelReg(this, 0, "inventory");
     }
 
-    @Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
-    {
-        ItemStack itemstack = playerIn.getHeldItem(handIn);
 
-        if (playerIn.canEat(SRPMeshiConfig.alwaysEdible))
-        {
-            playerIn.setActiveHand(handIn);
-            return new ActionResult<>(EnumActionResult.SUCCESS, itemstack);
-        }
-        else
-            return new ActionResult<>(EnumActionResult.FAIL, itemstack);
+    public ItemFood alwaysEdibleToggle(boolean toggle){
+        return (toggle)?this.setAlwaysEdible():this;
     }
 }

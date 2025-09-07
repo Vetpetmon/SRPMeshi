@@ -54,7 +54,10 @@ public class Core {
         proxy.preInit(event);
 
         if (Loader.isModLoaded("tfc")) {
-            logger.info("Hello, Terrafirmacraft!");
+            if (SRPMeshiConfig.tfcModule)
+                logger.info("Hello, Terrafirmacraft!");
+            else
+                logger.error("Terrafirmacraft was detected, but the Terrafirmacraft module is disabled. If you do not intend on using Crafttweaker to add food values yourself, go into mod settings or configs and activate it.");
         }
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -92,22 +95,27 @@ public class Core {
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(SRPMItems.ALL_ITEMS.toArray(new Item[0]));
+        logger.info("All items have been registered.");
 
         if (Loader.isModLoaded("tfc") && SRPMeshiConfig.tfcModule) {
             logger.info("We will now attempt to natively support TFC's food system.");
-
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercala),         () -> new FoodHandler(null, MeshiFoodData.DEVOURER_CALAMARI));
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercalacooked),   () -> new FoodHandler(null, MeshiFoodData.COOKED_DEVOURER_CALAMARI));
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourersushi),        () -> new FoodHandler(null, MeshiFoodData.DEVOURER_SUSHI));
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefr),            () -> new FoodHandler(null, MeshiFoodData.RAW_VILEBEEF));
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefu),            () -> new FoodHandler(null, MeshiFoodData.UNDERCOOKED_VILEBEEF));
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefc),            () -> new FoodHandler(null, MeshiFoodData.COOKED_VILEBEEF));
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.rupter_ramen),         () -> new FoodHandler(null, MeshiFoodData.RUPTER_RAMEN));
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_buglin),       () -> new FoodHandler(null, MeshiFoodData.ROASTED_BUGLIN));
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_fangs),            () -> new FoodHandler(null, MeshiFoodData.RAW_FANGS));
-            CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_fangs),        () -> new FoodHandler(null, MeshiFoodData.COOKED_FANGS));
-
+            attachFoodData();
         }
+    }
+
+    public void attachFoodData(){
+
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercala),         () -> new FoodHandler(null, MeshiFoodData.DEVOURER_CALAMARI));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourercalacooked),   () -> new FoodHandler(null, MeshiFoodData.COOKED_DEVOURER_CALAMARI));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.devourersushi),        () -> new FoodHandler(null, MeshiFoodData.DEVOURER_SUSHI));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefr),            () -> new FoodHandler(null, MeshiFoodData.RAW_VILEBEEF));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefu),            () -> new FoodHandler(null, MeshiFoodData.UNDERCOOKED_VILEBEEF));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefc),            () -> new FoodHandler(null, MeshiFoodData.COOKED_VILEBEEF));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.rupter_ramen),         () -> new FoodHandler(null, MeshiFoodData.RUPTER_RAMEN));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_buglin),       () -> new FoodHandler(null, MeshiFoodData.ROASTED_BUGLIN));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_fangs),            () -> new FoodHandler(null, MeshiFoodData.RAW_FANGS));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_fangs),        () -> new FoodHandler(null, MeshiFoodData.COOKED_FANGS));
+
     }
 
     @Mod.Instance(MOD_ID)
