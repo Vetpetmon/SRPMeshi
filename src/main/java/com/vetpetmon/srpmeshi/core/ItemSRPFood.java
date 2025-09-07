@@ -9,6 +9,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
 public class ItemSRPFood extends ItemFood implements IHasModel {
@@ -56,5 +59,19 @@ public class ItemSRPFood extends ItemFood implements IHasModel {
     @Override
     public void registerModels() {
         Core.proxy.modelReg(this, 0, "inventory");
+    }
+
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
+    {
+        ItemStack itemstack = playerIn.getHeldItem(handIn);
+
+        if (playerIn.canEat(SRPMeshiConfig.alwaysEdible))
+        {
+            playerIn.setActiveHand(handIn);
+            return new ActionResult<>(EnumActionResult.SUCCESS, itemstack);
+        }
+        else
+            return new ActionResult<>(EnumActionResult.FAIL, itemstack);
     }
 }

@@ -18,4 +18,9 @@ public class SRPMeshiConfig {
     @Config.Comment({"Enables or disables buffs of food items.", "Setting this to false will disable items giving effects such as Strength to the player."})
     public static boolean itemPosEffects = true;
 
+    @Config.Name("Always Edible")
+    @Config.Comment({"Allows food items to be eaten at any time."})
+    public static boolean alwaysEdible = false;
+
+
 }
