@@ -109,6 +109,7 @@ public class Core {
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefu),                () -> new FoodHandler(null, MeshiFoodData.UNDERCOOKED_VILEBEEF));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.vilebeefc),                () -> new FoodHandler(null, MeshiFoodData.COOKED_VILEBEEF));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.rupter_ramen),             () -> new FoodHandler(null, MeshiFoodData.RUPTER_RAMEN));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_buglin),               () -> new FoodHandler(null, MeshiFoodData.RAW_BUGLIN));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_buglin),           () -> new FoodHandler(null, MeshiFoodData.ROASTED_BUGLIN));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_fangs),                () -> new FoodHandler(null, MeshiFoodData.RAW_FANGS));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_fangs),            () -> new FoodHandler(null, MeshiFoodData.COOKED_FANGS));

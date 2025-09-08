@@ -6,6 +6,9 @@ Dungeon Meshi, but for SRP
 ## 1.6
 I regret to inform you that beckons are vegetarian-friendly.
 
+- Added Raw Buglin (ID: raw_buglin) (Requires SRP config modifications)
+- New textures by Bilebirda
+- Roasted Buglin is now made by smelting Raw Buglin
 - Added configs
 - Configs are accessible in-game
 - Effects can now be toggled, see independent toggles below

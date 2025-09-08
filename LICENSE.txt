@@ -1,10 +1,10 @@
 Scape and Run: Parasites is licensed as All Rights Reserved, w/ Dhanantry & team
-Scape and Run: Meshi is licensed as Some Rights Reserved, w/ Modrome.
+Scape and Run: Meshi is licensed as Some Rights Reserved, w/ Modrome & Bilebirda.
 
 I have opened the source to this mod for the educational & non-comercial usage of code & assets. 
 This can help give users of an idea on how to make an add-on for an existing mod.
 
 When using snippets of code from this repo, please give credit to Modrome.
-When using the artistic works or assets from this repo, please give credit to Modrome.
+When using the artistic works or assets from this repo, please give credit to Modrome and Bilebirda.
 
 The JSON is free to reference, copy, and transform.

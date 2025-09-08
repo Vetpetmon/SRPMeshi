@@ -14,6 +14,7 @@ public class SRPMItems {
 
     public static final Item
         roasted_buglin = new ItemSRPFood("roasted_buglin",3,0.1f,true),
+        raw_buglin = new ItemSRPFood("raw_buglin",1,0.0f,true).setPotionEffectSpecial(new PotionEffect(SRPPotions.COTH_E, 300, 0), 1.0F,false),
         rupter_ramen = new ItemSRPFood("rupter_ramen",4,0.2f,false).setPotionEffectSpecial(new PotionEffect(SRPPotions.COTH_E, 300, 0), 1.0F,false),
         raw_fangs = new ItemSRPFood("raw_fangs",2,0.15f,true).setPotionEffectSpecial(new PotionEffect(MobEffects.POISON, 100, 0), 1.0F,false),
         roasted_fangs = new ItemSRPFood("roasted_fangs",5,0.2f,true),
