@@ -101,7 +101,7 @@ dependencies {
     //embed ("org.joml:joml:1.10.5")
 
     // Example of deobfuscating a dependency
-    // implementation rfg.deobf('curse.maven:had-enough-items-557549:4543375')
+     runtimeOnly('curse.maven:had-enough-items-557549:4543375')
 
     if (project.use_mixins.toBoolean()) {
         // Change your mixin refmap name here:

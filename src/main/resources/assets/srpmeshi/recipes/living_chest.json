@@ -1,0 +1,9 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["V V","ACB","#A#"],
+  "key": {
+    "#": {"item": "srparasites:dried_tendons", "data": 0},
+    "C": {"item": "srparasites:living_core", "data": 0},
+    "V": {"item": "srparasites:bone", "data": 0},
+    "B": {"item": "srparasites:lurecomponent4", "data": 0},
+    "A": {"item": "srparasites:vile_shell", "data": 0}
+  }, "result": {"item": "srparasites:armor_chest", "count": 1}}

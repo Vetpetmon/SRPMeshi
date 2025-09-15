@@ -8,6 +8,7 @@ A large amount of balancing changes based on user feedback and Parafirmagreg SMP
 
 - Many non-protein food values were bumped up (Terrafirmacraft integration)
 - Raw meats rot faster (Terrafirmacraft integration)
+- Living armor set now craftable
 
 ## 1.6
 I regret to inform you that beckons are vegetarian-friendly.

@@ -1,0 +1,7 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["ACA","# #"],
+  "key": {
+    "#": {"item": "srpmeshi:raw_fangs", "data": 0},
+    "C": {"item": "srparasites:ada_manducater_drop", "data": 0},
+    "A": {"item": "srparasites:vile_shell", "data": 0}
+  }, "result": {"item": "srparasites:armor_helm", "count": 1}}

@@ -1,0 +1,6 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": ["V V","# #"],
+  "key": {
+    "#": {"item": "srparasites:dried_tendons", "data": 0},
+    "V": {"item": "srparasites:vile_shell", "data": 0}
+  }, "result": {"item": "srparasites:armor_boots", "count": 1}}
