@@ -21,6 +21,12 @@ public class SRPMeshiConfig {
     @Config.RequiresMcRestart
     public static boolean itemPosEffects = true;
 
+    @Config.Name("Item Effect Duration Multiplier")
+    @Config.Comment({"Multiplies the duration of potion effects applied by all food items."})
+    @Config.RangeDouble(min = 0.0d)
+    @Config.RequiresMcRestart
+    public static double effectDurationMultiplier = 1.0d;
+
     @Config.Name("Always Edible")
     @Config.Comment({"Allows food items to be eaten at any time."})
     @Config.RequiresMcRestart
@@ -30,6 +36,7 @@ public class SRPMeshiConfig {
     @Config.Comment({"Attaches Food Data to items.","If you are playing with Terrafirmagreg, this should be disabled in favor of using Crafttweaker."})
     @Config.RequiresMcRestart
     public static boolean tfcModule = true;
+
 
 
 }
