@@ -1,5 +1,28 @@
 # Scape and Meshi
-Dungeon Meshi, but for SRP
+Dungeon Meshi, but for SRP. Sorry, Loneguy, we're making meals out of the parasites, it's canon and you cannot stop us.
+
+Made by official SRP developers & artists.
+
+> There's so many cursed foodstuff possibilities with SRP... It only makes sense that there's a separate mod that updates rapidly compared to the main mod.
+> That way, we don't have to wait for SRP to update to see our stuff in action.
+> Thus, I propose making energy drinks out of Yelloweye acid.   -モドローム, 2025
+
+## Developers
+- Main dev: Modoromu (モドローム) of SRP
+- Placeholder artist: Modoromu (モドローム) of SRP
+- Main artist: Bilebirda of SRP
+
+## Bug Reporting
+
+For reporting errors, please don't use Discord. Use GitHub Issues instead, and post logs and crashlogs through [mclo.gs](https://mclo.gs/).
+
+## Contributing
+
+Please read the [License](https://github.com/Vetpetmon/SRPMeshi/blob/main/LICENSE.txt) before contributing. Fork this repository, make your edits, explain your changes, and create a PR to [Vetpetmon/SRPMeshi](https://github.com/Vetpetmon/SRPMeshi). Only Modoromu may edit the License. Git will automatically handle technical credits.
+
+*Modoromu will add credits to the [License](https://github.com/Vetpetmon/SRPMeshi/blob/main/LICENSE.txt) promptly after the merge. If you wish to not be credited, please inform the main dev (Modoromu) in the description of your PR. You will be anonymized upon request.*
+
+**If you do not follow the instructions to fork and send a PR to the root repository, your contributions will not be accepted due to inability to grant technical credits. Internal (SRP team) contributions are excluded from this requirement & are permitted to contribute directly.**
 
 ## Mod Integrations & Interactions
 <table class="tg"><thead>
@@ -61,7 +84,7 @@ Dungeon Meshi, but for SRP
   </tr>
 </tbody></table>
 
-# Building (For Developers)
+## Building (For Developers)
 
 SRP Meshi does not come bundled with IDE run tasks, they will have to be added yourself.
 
