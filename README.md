@@ -19,13 +19,17 @@ Dungeon Meshi, but for SRP
     <td class="tg-0pky">Done</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="2">Scape and Run: Parasites</td>
+    <td class="tg-0pky" rowspan="3">Scape and Run: Parasites</td>
     <td class="tg-0pky">Loot drops (native)</td>
     <td class="tg-0pky">SRP Patreon Build Only</td>
   </tr>
   <tr>
     <td class="tg-0pky">Loot drops (1.9 support)</td>
     <td class="tg-0pky">Not started, may be covered by SRPMixins</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">TFC nutrient data</td>
+    <td class="tg-0pky">Patreon SRP builds only</td>
   </tr>
   <tr>
     <td class="tg-0pky" rowspan="2">Scape and Run: Parasites Extra</td>
@@ -57,6 +61,17 @@ Dungeon Meshi, but for SRP
   </tr>
 </tbody></table>
 
+# Building (For Developers)
+
+SRP Meshi does not come bundled with IDE run tasks, they will have to be added yourself.
+
+In your IDE, run `setupDecompWorkspace`, wait until the provided Gradle Wrapper finishes the task before proceeding.
+
+- To build the jar, run `build` through a Gradle task.
+- To test the jar, run `runClient` and ensure server compatibility by running `runServer`.
+- **Never** declare a version as complete without running `runServer` prior to release.
+
+Notice for mod compatibility testing: Due to the nature of some mods, they cannot be tested in a debug (decomp, deobfuscated) environment; they will crash outright. Instead, use Curseforge or Prism instances to test the compatibility or integration modules.
 
 
 
