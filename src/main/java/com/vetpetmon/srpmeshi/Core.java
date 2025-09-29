@@ -42,9 +42,8 @@ public class Core {
         logger = event.getModLog();
         proxy.preInit(event);
 
-        if (Loader.isModLoaded("tfc") && SRPMeshiConfig.tfcModule) {
+        if (Loader.isModLoaded("tfc") && SRPMeshiConfig.tfcModule)
             logger.info("Hello, Terrafirmacraft!");
-        }
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -52,7 +51,6 @@ public class Core {
 
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event) {
-
         proxy.init(event);
     }
 
