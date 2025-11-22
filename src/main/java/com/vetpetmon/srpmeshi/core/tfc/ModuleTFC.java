@@ -46,6 +46,7 @@ public class ModuleTFC {
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_fangs),                () -> new FoodHandler(null, MeshiFoodData.RAW_FANGS));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.roasted_fangs),            () -> new FoodHandler(null, MeshiFoodData.COOKED_FANGS));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.glazed_fangs),             () -> new FoodHandler(null, MeshiFoodData.GLAZED_FANGS));
+        CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.beckon_tofu),              () -> new FoodHandler(null, MeshiFoodData.BECKON_TOFU));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.raw_scallops),             () -> new FoodHandler(null, MeshiFoodData.RAW_SCALLOPS));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.cooked_scallops),          () -> new FoodHandler(null, MeshiFoodData.COOKED_SCALLOPS));
         CapabilityFood.CUSTOM_FOODS.put(IIngredient.of(SRPMItems.sum_jelly_sandwich_b),     () -> new FoodHandler(null, MeshiFoodData.SUMMONER_JELLY_SANDWICH_B));

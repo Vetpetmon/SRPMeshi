@@ -99,6 +99,10 @@ Notice for mod compatibility testing: Due to the nature of some mods, they canno
 
 
 # Changelog:
+## 1.8
+
+- Added Beckon Tofu
+
 
 ## 1.7
 A large amount of balancing changes based on user feedback and Parafirmagreg SMP observations

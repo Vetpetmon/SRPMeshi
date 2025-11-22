@@ -15,6 +15,7 @@ public class MeshiFoodData {
     public static final FoodData RAW_VILEBEEF               = new FoodData(1, 10.0F,    0.0F,   0.0F,   0.0F,   0.0F,   1.0F,   0.0F,   2.25f);
     public static final FoodData UNDERCOOKED_VILEBEEF       = new FoodData(1, 5.0F,     2.0F,   0.0F,   0.0F,   0.0F,   1.5F,   0.0F,   1.55f);
     public static final FoodData COOKED_VILEBEEF            = new FoodData(2, 0.0F,     8.0F,   0.0F,   0.0F,   0.0F,   2.0F,   0.0F,   1.0f);
+    public static final FoodData BECKON_TOFU                = new FoodData(2, 20.0F,    4.0F,   0.0F,   0.0F,   1.0F,   0.5F,   0.0F,   1.25f);
     public static final FoodData RAW_SCALLOPS               = new FoodData(1, 5.0F,     0.0F,   0.0F,   0.0F,   0.0F,   1.0F,   0.0F,   2.25f);
     public static final FoodData COOKED_SCALLOPS            = new FoodData(2, 0.0F,     5.0F,   0.0F,   0.0F,   0.0F,   2.0F,   0.0F,   1.0f);
     public static final FoodData TENDON_SANDWICH            = new FoodData(4, 0.0F,     20.0F,  1.0F,   0.0F,   0.0F,   1.0F,   0.0F,   1.0f);

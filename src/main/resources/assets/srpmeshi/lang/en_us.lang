@@ -25,3 +25,6 @@ item.vilebeefc.name=Cooked Vilesteak
 item.devourercala.name=Devourer Calamari
 item.devourercala_cooked.name=Cooked Devourer Calamari
 item.devourersushi.name=Devourer Sushi
+item.beckon_tofu.name=Beckon Tofu
+# Not yet implemented
+item.beckon_tofu_cooked.name=Cooked Beckon Tofu
