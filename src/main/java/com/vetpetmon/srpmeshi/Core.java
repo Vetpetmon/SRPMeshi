@@ -28,7 +28,7 @@ public class Core {
             MOD_ID = "srpmeshi",
             MOD_NAME = "SRP Meshi",
             VERSION = "1.8",
-            DEPENDENCIES = "required-after:forge@[14.21.1.2387,);required-after:srparasites@[1.9.20,);after:tfc",
+            DEPENDENCIES = "required-after:forge@[14.21.1.2387,);required-after:srparasites@[1.9.20,);after:tfc;after:farmersdelight",
             PROXY_COMMON = "com.vetpetmon.srpmeshi.CommonProxy",
             PROXY_CLIENT = "com.vetpetmon.srpmeshi.ClientProxy";
 
@@ -44,6 +44,8 @@ public class Core {
 
         if (Loader.isModLoaded("tfc") && SRPMeshiConfig.tfcModule)
             logger.info("Hello, Terrafirmacraft!");
+        if (Loader.isModLoaded("farmersdelight") && SRPMeshiConfig.fdlModule)
+            logger.info("Hello, Farmer's Delight!");
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -86,6 +88,11 @@ public class Core {
             logger.info("We will now attempt to natively support TFC's food system.");
             ModuleTFC.attachFoodData();
             ModuleTFC.registerHeatRecipes();
+        }
+
+        if (Loader.isModLoaded("farmersdelight") && SRPMeshiConfig.fdlModule) {
+            logger.info("We will now attempt to support Farmer's Delight Legacy.");
+            com.vetpetmon.srpmeshi.core.fdl.ModuleFDL.registerRuntimeRecipes();
         }
     }
 

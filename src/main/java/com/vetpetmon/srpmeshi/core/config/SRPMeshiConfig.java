@@ -1,7 +1,6 @@
 package com.vetpetmon.srpmeshi.core.config;
 
 import net.minecraftforge.common.config.Config;
-import net.minecraftforge.common.config.Configuration;
 
 @Config(modid = "srpmeshi", name = "srp_meshi_config")
 public class SRPMeshiConfig {
@@ -37,6 +36,9 @@ public class SRPMeshiConfig {
     @Config.RequiresMcRestart
     public static boolean tfcModule = true;
 
-
+    @Config.Name("Farmer's Delight Legacy Module")
+    @Config.Comment({"Enables compatibility/integration with Farmer's Delight Legacy. \"Welcome to 1.12.2, Realmfall folks.\""})
+    @Config.RequiresMcRestart
+    public static boolean fdlModule = true;
 
 }

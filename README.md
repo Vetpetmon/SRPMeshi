@@ -44,15 +44,15 @@ Please read the [License](https://github.com/Vetpetmon/SRPMeshi/blob/main/LICENS
   <tr>
     <td class="tg-0pky" rowspan="3">Scape and Run: Parasites</td>
     <td class="tg-0pky">Loot drops (native)</td>
-    <td class="tg-0pky">SRP Patreon Build Only</td>
+    <td class="tg-0pky">As of 1.10.x</td>
   </tr>
   <tr>
     <td class="tg-0pky">Loot drops (1.9 support)</td>
-    <td class="tg-0pky">Not started, may be covered by SRPMixins</td>
+    <td class="tg-0pky">Out of scope</td>
   </tr>
   <tr>
     <td class="tg-0pky">TFC nutrient data</td>
-    <td class="tg-0pky">Patreon SRP builds only</td>
+    <td class="tg-0pky">As of 1.10.x</td>
   </tr>
   <tr>
     <td class="tg-0pky" rowspan="2">Scape and Run: Parasites Extra</td>
@@ -81,6 +81,11 @@ Please read the [License](https://github.com/Vetpetmon/SRPMeshi/blob/main/LICENS
     <td class="tg-0lax">How Do I Prove It?</td>
     <td class="tg-0lax">No</td>
     <td class="tg-0lax">Never</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky" rowspan="2">Farmer's Delight</td>
+    <td class="tg-0pky">Recipes</td>
+    <td class="tg-0pky">In Progress</td>
   </tr>
 </tbody></table>
 

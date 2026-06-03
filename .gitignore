@@ -25,3 +25,4 @@ run
 # Files from Forge MDK
 forge*changelog.txt
 libs
+/lib/SRParasites-1.12.2v1.10.0.jar
