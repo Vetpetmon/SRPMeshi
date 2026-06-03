@@ -1,12 +1,15 @@
 package com.vetpetmon.srpmeshi.core.fdl;
 
 
+import com.dhanantry.scapeandrunparasites.entity.monster.adapted.EntityLumAdapted;
 import com.dhanantry.scapeandrunparasites.entity.monster.feral.EntityFerCow;
 import com.dhanantry.scapeandrunparasites.entity.monster.inborn.EntityLodo;
 import com.dhanantry.scapeandrunparasites.entity.monster.inborn.EntityMudo;
 import com.dhanantry.scapeandrunparasites.entity.monster.inborn.EntityNuuh;
 import com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfCow;
+import com.dhanantry.scapeandrunparasites.entity.monster.infected.EntityInfSquid;
 import com.dhanantry.scapeandrunparasites.entity.monster.infected.special.EntitySpeCow;
+import com.dhanantry.scapeandrunparasites.entity.monster.primitive.EntityLum;
 import com.dhanantry.scapeandrunparasites.util.SRPReference;
 import com.vetpetmon.srpmeshi.Core;
 import com.vetpetmon.srpmeshi.core.SRPMItems;
@@ -15,6 +18,7 @@ import com.wdcftgg.farmersdelightlegacy.api.recipe.CookingPotRecipeApi;
 import com.wdcftgg.farmersdelightlegacy.api.recipe.CuttingBoardRecipeApi;
 import com.wdcftgg.farmersdelightlegacy.api.recipe.knife.HuntingDropRecipeApi;
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -27,14 +31,24 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
+import java.util.LinkedHashMap;
+
 /**
  * The module with exclusively Farmer's Delight Legacy API.
  */
 public class ModuleFDL {
     public static void registerRuntimeRecipes() {
         if (SRPMeshiConfig.fdlModule) {
+            cookingPot();
             huntingDrops();
         }
+    }
+    private static void cuttingBoard() {
+
+    }
+
+    private static void cookingPot() {
+
     }
 
     private static void huntingDrops() {
@@ -50,7 +64,12 @@ public class ModuleFDL {
                 new ItemStack(SRPMItems.vilebeefr), false, 0.45f, 0.25f, false, entityId(SRPReference.MOD_ID, "mar_cow"));
         HuntingDropRecipeApi.registerRecipe(recipeKey("fer_cow_hunting"), target -> target.getClass() == EntityFerCow.class,
                 new ItemStack(SRPMItems.vilebeefr), false, 0.45f, 0.25f, false, entityId(SRPReference.MOD_ID, "fer_cow"));
-
+        HuntingDropRecipeApi.registerRecipe(recipeKey("assim_squid_hunting"), target -> target.getClass() == EntityInfSquid.class,
+                new ItemStack(SRPMItems.devourercala), false, 0.15f, 0.1f, false, entityId(SRPReference.MOD_ID, "sim_squid"));
+        HuntingDropRecipeApi.registerRecipe(recipeKey("prim_devourer_hunting"), target -> target.getClass() == EntityLum.class,
+                new ItemStack(SRPMItems.devourercala), false, 0.45f, 0.15f, false, entityId(SRPReference.MOD_ID, "pri_devourer"));
+        HuntingDropRecipeApi.registerRecipe(recipeKey("ada_devourer_hunting"), target -> target.getClass() == EntityLumAdapted.class,
+                new ItemStack(SRPMItems.devourercala), false, 0.75f, 0.25f, false, entityId(SRPReference.MOD_ID, "ada_devourer"));
     }
 
     private static void registerCooking(String name, String[] ingredients, ItemStack result, ItemStack container, int cookingTime, float experience) {
@@ -66,17 +85,9 @@ public class ModuleFDL {
         CuttingBoardRecipeApi.registerRecipe(recipeKey("cutting/" + name), inputToken, null, normalOutputToken, count, chance);
     }
 
-    private static ItemStack getFieryCuttingResult(ItemStack outputStack) {
-        ItemStack smeltingResult = FurnaceRecipes.instance().getSmeltingResult(outputStack);
-        return smeltingResult.isEmpty() ? outputStack : smeltingResult.copy();
-    }
-
     private static String itemToken(ItemStack itemStack) {
-        ResourceLocation registryName = itemStack.getItem().getRegistryName();
-        String token = registryName.toString();
-        if (itemStack.getMetadata() != 0) {
-            token += "@" + itemStack.getMetadata();
-        }
+        String token = itemStack.getItem().getRegistryName().toString();
+        if (itemStack.getMetadata() != 0) token += "@" + itemStack.getMetadata();
         return token;
     }
 
@@ -103,9 +114,9 @@ public class ModuleFDL {
         return new ItemStack(block);
     }
 
-    private static ItemStack enchantedStack(Item item, net.minecraft.enchantment.Enchantment enchantment, int level) {
+    private static ItemStack enchantedStack(Item item, Enchantment enchantment, int level) {
         ItemStack itemStack = stack(item);
-        EnchantmentHelper.setEnchantments(new java.util.LinkedHashMap<net.minecraft.enchantment.Enchantment, Integer>() {{
+        EnchantmentHelper.setEnchantments(new LinkedHashMap<Enchantment, Integer>() {{
             put(enchantment, level);
         }}, itemStack);
         return itemStack;
