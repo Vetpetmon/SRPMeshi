@@ -104,6 +104,10 @@ Notice for mod compatibility testing: Due to the nature of some mods, they canno
 
 
 # Changelog:
+
+## 2.0
+- Added Farmer's Delight integration (Hunting w/ knife only for now)
+
 ## 1.8
 
 - Added Beckon Tofu
