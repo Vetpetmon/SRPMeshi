@@ -8,3 +8,6 @@ When using snippets of code from this repo, please give credit to Modrome.
 When using the artistic works or assets from this repo, please give credit to Modrome and Bilebirda.
 
 The JSON is free to reference, copy, and transform.
+
+CONTRIBUTORS:
+MrKoteo - Russian localization
