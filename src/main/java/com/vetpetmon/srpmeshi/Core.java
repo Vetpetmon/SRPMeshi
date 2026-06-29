@@ -27,7 +27,7 @@ public class Core {
     public static final String
             MOD_ID = "srpmeshi",
             MOD_NAME = "SRP Meshi",
-            VERSION = "1.8",
+            VERSION = "2.1",
             DEPENDENCIES = "required-after:forge@[14.21.1.2387,);required-after:srparasites@[1.9.20,);after:tfc;after:farmersdelight",
             PROXY_COMMON = "com.vetpetmon.srpmeshi.CommonProxy",
             PROXY_CLIENT = "com.vetpetmon.srpmeshi.ClientProxy";

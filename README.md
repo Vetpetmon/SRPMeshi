@@ -105,6 +105,11 @@ Notice for mod compatibility testing: Due to the nature of some mods, they canno
 
 # Changelog:
 
+## 2.1
+- Added ru_ru_lang (MrKoteo)
+- Buffed Membrane Bread and Devourer Sushi
+- Fixed Devourer Calamari and Vilebeef not being wolf foods (idk why you'd give them anything from SRP:M in the first place but thats just me)
+
 ## 2.0
 - Added Farmer's Delight integration (Hunting w/ knife only for now)
 
